@@ -1,0 +1,159 @@
+:root {
+  /* ⚡ Primary Colors with Gradient */
+  --primary: #0ea5e9;               /* Vibrant Sky Blue */
+  --primary-dark: #0369a1;          /* Deep Ocean Blue */
+  --primary-light: #a5d8ff;         /* Light Sky Blue */
+  --primary-gradient: linear-gradient(45deg, #0ea5e9, #36b9ff);
+
+  /* 🚨 Danger (Red Alert Theme) */
+  --danger: #f43f5e;                /* Bright Rose Red */
+  --danger-dark: #b91c1c;           /* Blood Red for Strong Warnings */
+  --danger-gradient: linear-gradient(45deg, #f43f5e, #ea2c62);
+
+  /* ✨ Glassmorphism / Frosted Effect */
+  --card-bg: rgba(255, 255, 255, 0.15);       /* Crisper Glass Card */
+  --card-hover-bg: rgba(255, 255, 255, 0.25); /* Stronger hover */
+  --border-color: rgba(255, 255, 255, 0.4);   /* Bright edge for card separation */
+
+  /* 🌫️ Light & Dark Text Colors */
+  --text-dark: #ffffff;              /* Pure White */
+  --text-light: #e2e8f0;             /* Soft Gray for text contrast */
+
+  /* 🌟 Accents & Glows */
+  --shadow-glow: 0 12px 40px rgba(0, 0, 0, 0.3);   /* Deep Shadow */
+  --highlight-glow: 0 0 20px rgba(14, 165, 233, 0.8); /* Neon Glow for hover effect */
+  --border-radius: 1.8rem;                /* Rounded corners for a smooth feel */
+  --transition-speed: 0.35s ease-in-out;     /* Smooth transitions */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e293b;  /* Dark theme */
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Disable horizontal scrolling */
+}
+
+.toc-container {
+  max-width: 1300px;
+  margin: 4rem auto;
+  padding: 5rem;
+  text-align: center;
+  background-color: var(--card-bg);
+  border-radius: 30px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-glow);
+  border: 1px solid var(--border-color);
+  animation: fadeIn 1.4s ease-out;
+  position: relative;
+}
+
+.toc-title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  letter-spacing: -2px;
+  animation: slideDown 1.2s ease forwards;
+}
+
+.toc-subtitle {
+  font-size: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 3rem;
+  line-height: 1.8;
+  animation: slideDown 1.2s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.logout-button {
+  background: var(--danger-gradient);
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logout-button:hover {
+  background: var(--danger-dark);
+  transform: scale(1.08);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+}
+
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.toc-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 25px;
+  padding: 3rem;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: var(--text-dark);
+  transform: translateY(40px);
+  opacity: 0;
+  animation: fadeInUp 0.9s ease forwards;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+}
+
+.toc-card:hover {
+  background: var(--card-hover-bg);
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+}
+
+.toc-card h2 {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.toc-card p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  opacity: 0.9;
+}
+
+/* Animation Classes */
+.animate-fade-up {
+  animation-name: fadeInUp;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

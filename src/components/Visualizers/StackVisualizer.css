@@ -1,0 +1,239 @@
+/* General styles for the stack visualizer */
+.stack-visualizer {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #6e7cfc, #3c80f0);
+  padding: 20px;
+  min-height: 100vh;
+  color: #fff;
+  box-sizing: border-box;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Header styles */
+.stack-visualizer h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s forwards;
+}
+
+/* Input Field */
+.stack-visualizer input {
+  margin: 15px;
+  padding: 15px;
+  width: 180px;
+  font-size: 1.5em;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+  text-align: center;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+.stack-visualizer input:focus {
+  border-color: #ff9900;
+  box-shadow: 0 0 10px rgba(255, 153, 0, 0.7);
+  transform: translateY(-5px);
+}
+
+.stack-visualizer input::placeholder {
+  color: #ccc;
+}
+
+/* Button Container */
+.stack-visualizer .buttons-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  gap: 20px;
+}
+
+/* Button Styles */
+.stack-visualizer button {
+  padding: 15px 25px;
+  font-size: 1.4rem;
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stack-visualizer button:hover {
+  background-color: #e68a00;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.stack-visualizer button:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+/* Message Section */
+.stack-visualizer .message {
+  margin-top: 20px;
+  font-size: 1.4em;
+  color: #d9534f;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+/* Stack Display */
+.stack-visualizer .stack {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Stack Item Styles */
+.stack-visualizer .stack-item {
+  width: 120px;
+  height: 60px;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stack-visualizer .stack-item:hover {
+  transform: scale(1.1);
+  background-color: #34b851;
+}
+
+.stack-visualizer .stack-item::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #28a745;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.stack-visualizer .stack-item.top {
+  background-color: #ffc107;
+}
+
+/* Label for the Top Stack Item */
+.stack-visualizer .top-label {
+  font-size: 1rem;
+  color: #333;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffc107;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Pseudo Code Section */
+.pseudo-code {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 900px;
+  overflow-x: auto;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.pseudo-code h3 {
+  text-align: center;
+  color: #ff9900;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.pseudo-code pre {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #e0e0e0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .stack-visualizer {
+    padding: 15px;
+  }
+
+  .stack-visualizer input {
+    width: 140px;
+  }
+
+  .stack-visualizer .buttons-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .stack-visualizer .message {
+    font-size: 1.2rem;
+  }
+
+  .stack-visualizer .stack-item {
+    width: 100px;
+    height: 50px;
+  }
+
+  .pseudo-code {
+    padding: 20px;
+    font-size: 14px;
+  }
+}

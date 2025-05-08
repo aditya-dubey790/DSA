@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* This will apply black background only to MergeSortVisualizer */
+body.merge-sort-visualizer-page {
+  background-color: black;
+  color: white; /* Ensure text is visible against the black background */
+}
+
+
+/* Apply background image to the linked-list-page container */
+.linked-list-page {
+  background-image: url('llb.jpg'); /* Correct path to image in the public folder */
+  background-size: cover; /* Ensure the image covers the whole container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  min-height: 100vh; /* Ensure the background covers the entire page */
+  padding: 20px;
+}

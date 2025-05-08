@@ -1,0 +1,129 @@
+.queue-visualizer {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f0f4f8;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  color: #4a90e2;
+}
+
+input, button {
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #357ab7;
+}
+
+.message {
+  margin-top: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.queue {
+  display: flex;
+  flex-direction: column-reverse; /* Stack style (bottom-up) */
+  align-items: center;
+  margin-top: 20px;
+}
+
+.queue-item {
+  background-color: #28a745; /* Green */
+  color: white;
+  padding: 10px 20px;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 120px;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+}
+
+/* Label for Front/Rear */
+.label {
+  font-size: 12px;
+  background-color: #000000aa;
+  padding: 2px 6px;
+  border-radius: 4px;
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+}
+
+.pseudo-code {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 30px auto 0 auto;
+  max-width: 100%;
+  width: 90%;
+  box-sizing: border-box;
+  overflow-x: auto;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.pseudo-code h3 {
+  text-align: center;
+  color: #4a90e2;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.pseudo-code pre {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #e0e0e0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .queue-visualizer {
+    padding: 15px;
+  }
+
+  input, button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .queue-item {
+    width: 100px;
+  }
+
+  .pseudo-code {
+    padding: 15px;
+    font-size: 13px;
+  }
+
+  .pseudo-code h3 {
+    font-size: 1.2em;
+  }
+
+  .label {
+    right: -50px;
+    font-size: 10px;
+  }
+}

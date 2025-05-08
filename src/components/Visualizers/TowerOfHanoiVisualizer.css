@@ -1,0 +1,155 @@
+.hanoi-main-container {
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f2f5;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #222; /* Dark heading */
+}
+
+.hanoi-controls {
+  margin-bottom: 30px;
+}
+
+.hanoi-controls label,
+.hanoi-delay-control label {
+  font-size: 1.1em;
+  margin-right: 8px;
+  color: #222; /* Dark label text */
+  font-weight: 600;
+}
+
+.hanoi-controls input {
+  width: 60px;
+  padding: 6px;
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.hanoi-controls button {
+  padding: 6px 14px;
+  margin-left: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.hanoi-controls button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.hanoi-controls button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.hanoi-tower-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 400px;
+  margin-top: 40px;
+  position: relative;
+}
+
+.hanoi-tower {
+  width: 100px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  position: relative;
+}
+
+.hanoi-peg {
+  background-color: #333;
+  width: 10px;
+  transition: height 0.3s ease;
+  position: absolute;
+  bottom: 0;
+}
+
+.hanoi-disk {
+  height: 22px;
+  margin: 6px 0;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #2e7d32, #66bb6a); /* Dark gradient */
+  color: #fff;
+  font-weight: bold;
+  line-height: 22px;
+  text-align: center;
+  transition: transform 0.2s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.hanoi-disk:hover {
+  transform: scale(1.05);
+}
+
+.hanoi-info-panel {
+  margin-top: 50px;
+  padding: 25px;
+  background-color: #1e1e1e;
+  color: #ddd;
+  border-radius: 12px;
+  text-align: left;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hanoi-info-panel h3 {
+  color: #ffcc00;
+  margin-bottom: 12px;
+}
+
+.hanoi-info-panel pre {
+  background-color: #2b2b2b;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: monospace;
+  color: #00eaff;
+  font-size: 0.95em;
+}
+
+.hanoi-info-panel p,
+.hanoi-info-panel ul {
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.hanoi-info-panel ul {
+  padding-left: 20px;
+}
+
+.hanoi-delay-control {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.hanoi-delay-control input[type='range'] {
+  width: 300px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.tower-label {
+  position: absolute;
+  bottom: -30px;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #444;
+  margin-top: 10px;
+}

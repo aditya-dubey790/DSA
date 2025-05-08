@@ -1,0 +1,122 @@
+/* Scoped styles for NQueenVisualizer */
+.nqueen-container {
+  background: white;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nqueen-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.control label {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.control input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.control input[type="range"] {
+  width: 140px;
+}
+
+button {
+  padding: 8px 18px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover:not(:disabled) {
+  background-color: #005fa3;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.board {
+  display: grid;
+  width: min(90vmin, 90vw);
+  height: min(90vmin, 90vw);
+  border: 3px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin-bottom: 30px;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(1.5rem + 1vmin);
+}
+
+.light {
+  background-color: #f0d9b5;
+}
+
+.dark {
+  background-color: #b58863;
+}
+
+.info-panel {
+  background: #1e1e1e;
+  color: #ffffff;
+  padding: 20px;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+.info-panel h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.info-panel pre {
+  background: #2e2e2e;
+  padding: 10px;
+  overflow-x: auto;
+  border-radius: 6px;
+  color: #d4d4d4;
+  font-size: 0.9rem;
+}
+
+.info-panel p {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}

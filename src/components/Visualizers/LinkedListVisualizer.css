@@ -1,0 +1,234 @@
+/* General Body Styling */
+.linked-list-visualizer {
+  font-family: 'Roboto', sans-serif;
+  padding: 40px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 50px auto;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+/* Header Styling */
+.linked-list-visualizer h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Container Styling */
+.linked-list-visualizer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: slideUp 1s ease-in-out;
+  max-width: 900px;
+  margin-top: 30px;
+}
+
+/* Input/Select/Button Styling */
+.linked-list-visualizer input,
+.linked-list-visualizer select,
+.linked-list-visualizer button {
+  margin: 10px;
+  padding: 15px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.linked-list-visualizer input:focus,
+.linked-list-visualizer select:focus {
+  border: 2px solid #4a90e2;
+  box-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+}
+
+.linked-list-visualizer button {
+  background: linear-gradient(135deg, #4a90e2, #357ab7);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.linked-list-visualizer button:hover {
+  background: linear-gradient(135deg, #357ab7, #4a90e2);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Linked List Styling */
+.linked-list-visualizer .linked-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Node Styling */
+.linked-list-visualizer .node {
+  position: relative;
+  margin: 15px;
+  background: linear-gradient(145deg, #ffffff, #e0e0e0);
+  border: 2px solid #4a90e2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: bounceIn 0.5s ease-in-out;
+}
+
+.linked-list-visualizer .node:hover {
+  background-color: #f5f7fa;
+  transform: scale(1.1);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.linked-list-visualizer .node .data {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.linked-list-visualizer .node .next {
+  font-size: 1.1rem;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* Arrow Styling */
+.linked-list-visualizer .arrow {
+  font-size: 2.5rem;
+  color: #4a90e2;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.linked-list-visualizer .arrow:hover {
+  transform: rotate(45deg);
+  color: #357ab7;
+}
+
+/* Pseudo-code Styling */
+.pseudo-code {
+  background-color: #222;
+  color: #f8f8f2;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 40px;
+  max-width: 1000px;
+  width: 100%;
+  overflow-x: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pseudo-code h3 {
+  text-align: center;
+  color: #61dafb;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.pseudo-code pre {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+  .linked-list-visualizer {
+    padding: 15px;
+  }
+
+  .container {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .pseudo-code {
+    padding: 14px;
+  }
+
+  .pseudo-code h3 {
+    font-size: 1.4rem;
+  }
+
+  .linked-list-visualizer .node {
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .linked-list-visualizer .arrow {
+    font-size: 2rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
